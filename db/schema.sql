@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS vgreview_db;
+CREATE DATABASE vgreview_db;
