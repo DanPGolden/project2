@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const { Review } = require("../models/index")
+const { Review } = require("../models")
 
 router.post("/save", async (req,res) => {
     let saveReview = await Review.create(req.body)
@@ -15,4 +15,5 @@ router.delete("/delete/:id", async (req,res) => {
     res.json(deleteReview)
 })
 
+router.delete()
 module.exports = router;
