@@ -19,5 +19,12 @@
         "author": "test review person 3",
         "description": "This test game is amazing!!!",
         "ps_compatible": "true"
+    },
+    {
+        "game_name": "test game 3",
+        "title": "This game is great",
+        "author": "test review person 3",
+        "description": "This test game is amazing!!!",
+        "nintendo_compatible": "true"
     }
 ]
