@@ -7,6 +7,14 @@ Review.hasOne(Game,{
 
 Game.hasMany(Review, {
     foreignKey: "review_id"
-})
+});
+
+Console.hasOne(Game, {
+    foreignKey: "game_id"
+});
+
+Game.hasMany(Console, {
+    foreignKey: "game_id"
+});
 
 module.exports = {Review}
