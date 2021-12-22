@@ -26,21 +26,29 @@ Review.init(
         }
       },
       author: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING, // author = login_id made from signup, connect these for when they want to delete a review
         allowNull: false,
       },
       description: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      game_id: {
+      user_id: {
           type: DataTypes.INTEGER,
           allowNull: false,
           references: {
-              model: "game",
+              model: "user",
               key: "id"
           }
-      }
+      },
+      game_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: "game",
+            key: "id"
+        }
+    }
     },
     {
       sequelize,
