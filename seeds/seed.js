@@ -23,7 +23,10 @@ const seedDatabase = async () => {
   await users.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
-  })
+  }) 
+  .catch ((err) => {
+    console.log(err)
+  });
 
   process.exit(0);
 };
