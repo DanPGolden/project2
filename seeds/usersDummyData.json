@@ -1,9 +1,7 @@
-<<<<<<< Updated upstream
-=======
 [
     {
         "name" : "User1",
-        "email" : "user1@user.com"
+        "email" : "firstuser@user.com"
     }, 
     {
         "name" : "User2", 
@@ -11,19 +9,19 @@
     },
     {
         "name" : "User3", 
-        "email"  : "6thuser@user.com"
-    },
-    {
-        "name" : "User9", 
-        "email"  : "userThree@user.com"
+        "email"  : "thirduser@user.com"
     },
     {
         "name" : "User4", 
-        "email"  : "fourthUser@user.com"
+        "email"  : "fourthuser@user.com"
     },
     {
         "name" : "User5", 
-        "email"  : "5thUser@user.com"
+        "email"  : "fifthuser@user.com"
+    },
+    {
+        "name" : "User6", 
+        "email"  : "sixthuser@user.com"
     }
 ]
->>>>>>> Stashed changes
+

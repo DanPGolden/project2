@@ -1,6 +1,7 @@
 const router = require("express").Router()
-const { Game, Review } = require("../models");
+const { Game, Review } = require("../../models");
 const withAuth = require('../utils/auth');
+
 
 router.get("/", async (req, res) => {
     const databaseReviews = await Review.findAll({ raw: true })
