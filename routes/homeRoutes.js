@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const {Review} = require("../../models/index.js")
+const {Review} = require("./models/index.js")
 
 router.get("/", async (req,res) => {
     const databaseReviews = await Review.findAll({raw: true})
