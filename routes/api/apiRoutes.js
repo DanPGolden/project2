@@ -15,5 +15,4 @@ router.delete("/delete/:id", async (req,res) => {
     res.json(deleteReview)
 })
 
-router.delete()
 module.exports = router;
