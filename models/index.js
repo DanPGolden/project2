@@ -1,12 +1,13 @@
 const Review = require("./review")
 const Game = require("./game")
 
-Review.hasOne(Game,{
-    foreignKey: "review_id"
+Review.belongsTo(Game, {
+    foreignKey: "game_id"
 });
 
 Game.hasMany(Review, {
-    foreignKey: "review_id"
-})
+    foreignKey: "game_id"
+});
 
-module.exports = {Review}
+
+module.exports = { Review }

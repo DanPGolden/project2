@@ -1,44 +1,44 @@
 [
     {
-        "game_name": "Halo",
-        "studio": "",
-        "description": "",
-        "platform": ""
+        "game_name": "Halo Infinite",
+        "studio": "Xbox Game Studios & 343 Industries",
+        "description": "Halo Infinite is a first-person shooter game developed by 343 Industries and published by Xbox Game Studios. It is the sixth mainline entry in the Halo series, and the third in the 'Reclaimer Saga' following Halo 5: Guardians.",
+        "platform": "Xbox"
     },
     {
-        "game_name": "",
-        "studio": "",
-        "description": "",
-        "platform": ""
+        "game_name": "Rocket League",
+        "studio": "Psyonix",
+        "description": "Rocket League is a vehicular soccer video game developed and published by Psyonix. The game was first released for Microsoft Windows and PlayStation 4 in July 2015, with ports for Xbox One and Nintendo Switch being released later on.",
+        "platform": "PC"
     },
     {
-        "game_name": "",
-        "studio": "",
-        "description": "",
-        "platform": ""
+        "game_name": "Forza Horizon 5",
+        "studio": "Playground Games",
+        "description": "Forza Horizon 5 is a 2021 racing video game developed by Playground Games and published by Xbox Game Studios.",
+        "platform": "Xbox"
     },
     {
-        "game_name": "",
-        "studio": "",
-        "description": "",
-        "platform": ""
+        "game_name": "Ratchet & Clank: Rift Apart",
+        "studio": "Insomniac Games & Sony Interactive Entertainment",
+        "description": "Ratchet & Clank: Rift Apart is a 2021 third-person shooter platform game developed by Insomniac Games and published by Sony Interactive Entertainment for the PlayStation 5.",
+        "platform": "PlayStation"
     },
     {
-        "game_name": "",
-        "studio": "",
-        "description": "",
-        "platform": ""
+        "game_name": "Final Fantasy VII Remake",
+        "studio": "Square Enix",
+        "description": "Final Fantasy VII Remake is a 2020 action role-playing game developed and published by Square Enix. It is the first in a planned series of games remaking the 1997 PlayStation game Final Fantasy VII.",
+        "platform": "PlayStation"
     },
     {
-        "game_name": "",
-        "studio": "",
-        "description": "",
-        "platform": ""
+        "game_name": "Pokémon Legends: Arceus",
+        "studio": "Game Freak",
+        "description": "Pokémon Legends: Arceus is an upcoming 2022 action role-playing game developed by Game Freak and published by Nintendo and The Pokémon Company for the Nintendo Switch.",
+        "platform": "Nintendo Switch"
     },
     {
-        "game_name": "",
-        "studio": "",
-        "description": "",
-        "platform": ""
+        "game_name": "Mario Party Superstars",
+        "studio": "Nintendo",
+        "description": "Mario Party Superstars is a 2021 party video game developed by NDcube and published by Nintendo for the Nintendo Switch. It is the twelfth home console installment in the Mario Party series.",
+        "platform": "Nintendo Switch"
     }
 ]
