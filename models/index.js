@@ -6,7 +6,7 @@ User.hasMany(Review, {
     foreignKey: "user_id"
 })
 
-Review.hasOne(Game, {
+Review.belongsTo(Game, {
     foreignKey: "review_id"
 })
 
@@ -16,4 +16,4 @@ Game.hasMany(Review, {
 
 // or would a review.belongsTo(User) be better?
 
-module.exports = {Review}
+module.exports = {Review, Game, User}

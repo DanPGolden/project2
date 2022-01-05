@@ -1,9 +1,0 @@
-ALL MUST HAVE LOGIN FUNCTION!!!
-
-dea 1: store front w/ email/ text share button, comment/ review section
-
-idea 2: music facing site with api linked to youtube videos 
-
-idea 3: pet adoption site, imager api for pup pics
-
-idea 4: 
