@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
-const routes = require("./routes/index.js")
+const routes = require('./routes');
 const sequelize = require('./config/connection');
 
 const app = express();
