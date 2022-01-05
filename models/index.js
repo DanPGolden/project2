@@ -11,5 +11,5 @@ Game.hasMany(Review, {
     foreignKey: "game_id"
 });
 
-module.exports = {Review, Game, Console, Users}
+module.exports = {Review, Game, Console, User}
 
