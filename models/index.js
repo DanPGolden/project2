@@ -15,4 +15,4 @@ Review.belongsTo(Game,{
     foreignKey: "review_id"
 });
 
-module.exports = {Review, Game, User}
+module.exports = {Review, Game, User, Console}
