@@ -14,14 +14,8 @@
     {
         "game_name": "Forza Horizon 5",
         "studio": "Playground Games",
-        "description": "Forza Horizon 5 is a 2021 racing video game developed by Playground Games and published by Xbox Game Studios. It is the fifth Forza Horizon title and twelfth main instalment in the Forza series. The game is set in a fictionalised representation of Mexico. ",
+        "description": "Forza Horizon 5 is a 2021 racing video game developed by Playground Games and published by Xbox Game Studios.",
         "platform": "Xbox"
-    },
-    {
-        "game_name": "",
-        "studio": "",
-        "description": "",
-        "platform": "PC"
     },
     {
         "game_name": "Ratchet & Clank: Rift Apart",
@@ -32,7 +26,7 @@
     {
         "game_name": "Final Fantasy VII Remake",
         "studio": "Square Enix",
-        "description": "Final Fantasy VII Remake is a 2020 action role-playing game developed and published by Square Enix. It is the first in a planned series of games remaking the 1997 PlayStation game Final Fantasy VII. Set in the dystopian cyberpunk metropolis of Midgar, players control mercenary Cloud Strife.",
+        "description": "Final Fantasy VII Remake is a 2020 action role-playing game developed and published by Square Enix. It is the first in a planned series of games remaking the 1997 PlayStation game Final Fantasy VII.",
         "platform": "PlayStation"
     },
     {
@@ -44,7 +38,7 @@
     {
         "game_name": "Mario Party Superstars",
         "studio": "Nintendo",
-        "description": "Mario Party Superstars is a 2021 party video game developed by NDcube and published by Nintendo for the Nintendo Switch. It is the twelfth home console installment in the Mario Party series, and the second for the Nintendo Switch following Super Mario Party. It was released on October 29, 2021.",
+        "description": "Mario Party Superstars is a 2021 party video game developed by NDcube and published by Nintendo for the Nintendo Switch. It is the twelfth home console installment in the Mario Party series.",
         "platform": "Nintendo Switch"
     }
 ]

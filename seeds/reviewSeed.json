@@ -4,18 +4,31 @@
         "title": "This game sucks",
         "author": "test review person 1",
         "description": "This test game is bad!!",
+        "xbox_compatible": "true",
+        "game_id": 1
     },
     {
         "game_name": "test game 2",
         "title": "This game is ok",
         "author": "test review person 2",
         "description": "This test game is fine",
+        "pc_compatible": "true",
+        "game_id": 1
     },
     {
         "game_name": "test game 3",
         "title": "This game is great",
         "author": "test review person 3",
         "description": "This test game is amazing!!!",
-        "ps_compatible": "true"
+        "ps_compatible": "true",
+        "game_id": 1
+    },
+    {
+        "game_name": "test game 3",
+        "title": "This game is great",
+        "author": "test review person 3",
+        "description": "This test game is amazing!!!",
+        "nintendo_compatible": "true",
+        "game_id": 1
     }
 ]

@@ -3,16 +3,13 @@ const Game = require("./game")
 const User = require("./user")
 const Console = require("./console")
 
-User.hasMany(Review, {
-    foreignKey: "user_id"
-})
-
 Review.belongsTo(Game, {
-    foreignKey: "review_id"
-})
-
-Review.belongsTo(Game,{
-    foreignKey: "review_id"
+    foreignKey: "game_id"
 });
 
-module.exports = {Review, Game, User, Console}
+Game.hasMany(Review, {
+    foreignKey: "game_id"
+});
+
+module.exports = {Review, Game, Console, Users}
+
