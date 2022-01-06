@@ -6,4 +6,13 @@ router.get("/", async (req,res) => {
     res.render('homepage', {allReviews: databaseReviews})
 })
 
+
+router.get('/login', function(req, res) {
+    res.render('login');
+})
+
+router.get('/review', function(req, res) {
+    res.render('review');
+})
+
 module.exports = router;

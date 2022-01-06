@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({});
 
+//app.engine('handlebars', exphbs({
+  //extname: '.handlebars'
+//}));
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 

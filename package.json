@@ -20,6 +20,7 @@
     "express-session": "^1.17.1",
     "materialize": "^1.0.0",
     "mysql2": "^2.2.5",
+    "path": "^0.12.7",
     "sequelize": "^6.3.5"
   },
   "repository": {
@@ -29,6 +30,5 @@
   "bugs": {
     "url": "https://github.com/DanPGolden/project2/issues"
   },
-  "homepage": "https://github.com/DanPGolden/project2#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/DanPGolden/project2#readme"
 }
