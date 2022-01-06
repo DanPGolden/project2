@@ -36,7 +36,7 @@ Game.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'game'
+      modelName: 'game',
     }
   );
   
