@@ -25,7 +25,7 @@ $("#login-btn").on("click", function() {
 $("#signup-btn").on("click", function() { 
     console.log("signup click")
     var signup = {
-        name: $("#signup-username").val(),
+        userName: $("#signup-username").val(),
         email: $("#signup-email").val(),
         password: $("#signup-password").val()
     }
@@ -41,5 +41,6 @@ $("#signup-btn").on("click", function() {
     }).then(function(response) {
         return response.json()
     }).then(function(data) {
+        console.log("backend signup data post fetch", data)
     })
 })

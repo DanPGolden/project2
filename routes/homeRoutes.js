@@ -37,6 +37,10 @@ router.get("/login", async (req, res) => {
     res.render("login")
 })
 
+router.get("/signup", async (req, res) => {
+    res.render("signup")
+})
+
 module.exports = router;
 
 // pull from the main, merge into my branch, seed database, and check if the specific routes work

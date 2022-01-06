@@ -3,7 +3,7 @@ const {User} = require("../models/index.js")
 
 router.post('/signup', async (req, res) => {
     const newUserData = await User.create({
-        name: req.body.name,
+        userName: req.body.userName,
         email: req.body.email,
         password: req.body.password,
     }, {raw: true})
