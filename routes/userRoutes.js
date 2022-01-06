@@ -17,6 +17,8 @@ router.post('/signup', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     const userData = await User.findOne({where: {email: req.body.email}})
+    console.log("req body password", req.body.password)
+    console.log("user data", userData)
     if(!userData){
         res.json({error: "user not found"})
     }
