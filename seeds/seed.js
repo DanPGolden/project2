@@ -1,7 +1,6 @@
 const sequelize = require('../config/connection');
 const {Console, Game, Review, User} = require("../models");
 
-
 const gameSeedData = require("./gameSeeds.json")
 const consoleData = require("./console.json")
 const userData = require("./usersDummyData.json")
