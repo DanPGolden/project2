@@ -1,7 +1,7 @@
 const sequelize = require('../config/connection');
 const {Console, Game, Review, User} = require("../models");
 
-const reviewSeedData = require("./reviewSeed.json")
+
 const gameSeedData = require("./gameSeeds.json")
 const consoleData = require("./console.json")
 const userData = require("./usersDummyData.json")
@@ -9,11 +9,11 @@ const reviewSeedData = require("./reviewSeed.json")
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-  await game.bulkCreate(gameSeedData, {
+  await Game.bulkCreate(gameSeedData, {
     individualHooks: true,
     returning: true,
   });
-  await review.bulkCreate(reviewSeedData, {
+  await Review.bulkCreate(reviewSeedData, {
     individualHooks: true,
     returning: true,
   });

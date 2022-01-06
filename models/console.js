@@ -6,7 +6,6 @@ class Console extends Model { }
 
 Console.init(
   {
-    // define columns
     console_type: {
       type: DataTypes.STRING,
       allowNull: false,
