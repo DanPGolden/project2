@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const Review  = require("../models")
+const {Review} = require("../models/index")
 
 router.post("/save", async (req,res) => {
     let saveReview = await Review.create(req.body)
