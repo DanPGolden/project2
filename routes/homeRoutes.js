@@ -33,6 +33,23 @@ router.get("/gameReviews/:id", async (req, res) => {
     }
 })
 
+router.get("/myReviews/:id", async (req, res) => {
+    if (req.session.user_id) {
+        const databaseReviews = await Review.findAll({
+            where: {
+                id: req.params.id
+            }, include: [{
+                model: Review,
+            }, {raw: true}]
+        })
+        res.render("myReviews", {myReviews: databaseReviews})
+    }
+    else {
+        res.redirect("/newReview")
+        console.log("Make a new review!")
+    }
+})
+
 router.get("/login", async (req, res) => {
     res.render("login")
 })
