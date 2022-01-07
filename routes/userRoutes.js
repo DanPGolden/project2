@@ -31,8 +31,7 @@ router.post('/login', async (req, res) => {
         console.log('user data in session save!', userData)
         req.session.user_id = userData.id;
         req.session.logged_in = true;
-        console.log("logged in user INSIDE", req.session)
-        res.send('U r logged in!');
+        res.send('u signed in!')
     })
     console.log("logged in user OUTSIDE", req.session)
 })

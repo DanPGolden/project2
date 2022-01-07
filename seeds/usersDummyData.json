@@ -13,5 +13,15 @@
         "userName" : "User3",
         "email" : "thirduser@user.com",
         "password": "1234567890"
-    } 
+    },
+    {
+        "userName": "User4",
+        "email": "fourthuser@user.com",
+        "password": "024680"
+    },
+    {
+        "userName": "User5",
+        "email": "fifthuser@user.com",
+        "password": "135791"
+    }
 ]
