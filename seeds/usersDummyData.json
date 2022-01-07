@@ -1,27 +1,33 @@
 [
     {
-        "name" : "User1",
-        "email" : "firstuser@user.com"
+        "userName" : "User1",
+        "email" : "firstuser@user.com",
+        "password" : "userspassword1-6"
     }, 
     {
-        "name" : "User2", 
-        "email"  : "seconduser@user.com"
+        "userName" : "User2", 
+        "email"  : "seconduser@user.com",
+        "password" : "userspassword1-6"
     },
     {
-        "name" : "User3", 
-        "email"  : "thirduser@user.com"
+        "userName" : "User3", 
+        "email"  : "thirduser@user.com",
+        "password" : "userspassword1-6"
     },
     {
-        "name" : "User4", 
-        "email"  : "fourthuser@user.com"
+        "userName" : "User4", 
+        "email"  : "fourthuser@user.com",
+        "password" : "userspassword1-6"
     },
     {
-        "name" : "User5", 
-        "email"  : "fifthuser@user.com"
+        "userName" : "User5", 
+        "email"  : "fifthuser@user.com",
+        "password" : "userspassword1-6"
     },
     {
-        "name" : "User6", 
-        "email"  : "sixthuser@user.com"
+        "userName" : "User6", 
+        "email"  : "sixthuser@user.com",
+        "password" : "userspassword1-6"
     }
 ]
 
