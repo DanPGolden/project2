@@ -1,1 +1,17 @@
 <p>A page showing the logged in user's reviews</p>
+
+{{#if user_id == req.session.id}}
+
+{{#each myReviews}}
+
+<h3>{{title}}</h3>
+<p>{{description}}</p>
+
+<p>{{user_id}}</p>
+<p>{{game_id}}</p>
+
+{{/each}}
+
+{{#else "No reviews exist!"}}
+
+{{/if}}

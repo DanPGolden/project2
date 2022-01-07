@@ -3,6 +3,7 @@ const {Game, Review, User} = require("../models");
 
 const gameSeedData = require("./gameSeeds.json")
 const userData = require("./usersDummyData.json")
+const reviewSeedData = require("./reviewSeed.json")
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
