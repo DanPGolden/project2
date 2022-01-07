@@ -6,6 +6,7 @@ router.get("/", async (req, res) => {
 })
 
 router.get("/gamesMain", async (req, res) => {
+    console.log('IN GAMES MAIN! ROUTE!!', req.session)
     if (req.session.user_id) {
         const databaseGames = await Game.findAll({ raw: true })
         res.render("gamesMain", { allGames: databaseGames })
@@ -18,14 +19,13 @@ router.get("/gamesMain", async (req, res) => {
 
 router.get("/gameReviews/:id", async (req, res) => {
     if (req.session.user_id) {
-        const databaseReviews = await Game.findAll({
+        const databaseReviews = await Review.findAll({
             where: {
-                 id: req.params.id 
-        }, include: [{
-            model: Review,
-        }, {raw: true}] // may need to change to plain: true if the raw true doesn't work
+                 game_id: req.params.id 
+        },
+        raw: true,
     })
-        res.render("gameReviews", { gameReviews: databaseReviews })
+        res.render("gameReviews", {gameReviews: databaseReviews})
     }
     else {
         res.redirect("/login")

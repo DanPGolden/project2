@@ -17,7 +17,6 @@ router.post('/signup', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     const userData = await User.findOne({where: {email: req.body.email}})
-    console.log("req body password", req.body.password)
     console.log("user data", userData)
     if(!userData){
         res.json({error: "user not found"})
@@ -29,10 +28,13 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
+        console.log('user data in session save!', userData)
         req.session.user_id = userData.id;
         req.session.logged_in = true;
+        console.log("logged in user INSIDE", req.session)
+        res.send('U r logged in!');
     })
-
+    console.log("logged in user OUTSIDE", req.session)
 })
 
 router.get("/logout", async (req, res) => {

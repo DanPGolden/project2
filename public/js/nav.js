@@ -1,23 +1,16 @@
 console.log("nav js connected")
 
-$("#login-btn").on("click", function() {
-    var login = {
-        userName: $("#login-username").val(), 
-        email: $("#login-email").val(), 
-        password: $("#login-password").val() 
-    }
-    console.log("Login data", login)
+$(".review-btn").on("click", function() {
+    console.log("what this", $(this).attr('name'))  
+    // not using this code because we want to change the URL, if we wanted to replace the content
+    // on the page we would use lines 8-14
 
-    fetch('/users/login', {
-        method: 'POST',
-        headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(login)
-    }).then(function(response) {
-        return response.json()
-    }).then(function(data) {
-        console.log("outgoing data from backend", data)
-    })
+    // fetch('/gameReviews/' + $(this).attr('name') , {
+    //     method: 'GET',
+    // }).then(function(response) {
+    //     return response.json()
+    // }).then(function(data) {
+    //     console.log("outgoing data from backend", data)
+    // })
+    window.location.replace('/gameReviews/' + $(this).attr('name'))
 })

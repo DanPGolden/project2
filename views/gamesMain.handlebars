@@ -2,9 +2,11 @@
 
 {{#each allGames}}
 
-<h1>{{title}}</h1>
+<h1>{{game_name}}</h1>
+<p>{{studio}}</p>
 <p>{{description}}</p>
+<p>{{platform}}</p>
+<button name={{id}} class="review-btn">See the reviews for this game!</button>
 
-<p>{{user_id}}</p>
-<p>{{author}}</p>
 {{/each}}
+
