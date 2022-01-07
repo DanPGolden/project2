@@ -33,8 +33,33 @@ router.get("/gameReviews/:id", async (req, res) => {
     }
 })
 
+router.get("/myReviews", async (req, res) => {
+    console.log('MY REVIEW ROUTE!!!', req.session, req.params)
+    if (req.session.user_id) {
+        const databaseReviews = await Review.findAll({
+            where: {
+                user_id: req.session.user_id
+            },
+            raw: true,
+        })
+        if(databaseReviews.length > 0) {
+            res.render("myReviews", {myReviews: databaseReviews})
+        } else {
+            res.redirect('/newReview')
+        }
+    }
+    else {
+        res.redirect("/newReview")
+        console.log("Make a new review!")
+    }
+})
+
 router.get("/login", async (req, res) => {
     res.render("login")
+})
+
+router.get("/newReview", async (req, res) => {
+    res.render("newReview")
 })
 
 router.get("/signup", async (req, res) => {
