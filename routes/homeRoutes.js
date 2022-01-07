@@ -33,16 +33,20 @@ router.get("/gameReviews/:id", async (req, res) => {
     }
 })
 
-router.get("/myReviews/:id", async (req, res) => {
+router.get("/myReviews", async (req, res) => {
+    console.log('MY REVIEW ROUTE!!!', req.session, req.params)
     if (req.session.user_id) {
         const databaseReviews = await Review.findAll({
             where: {
-                id: req.params.id
-            }, include: [{
-                model: Review,
-            }, {raw: true}]
+                user_id: req.session.user_id
+            },
+            raw: true,
         })
-        res.render("myReviews", {myReviews: databaseReviews})
+        if(databaseReviews.length > 0) {
+            res.render("myReviews", {myReviews: databaseReviews})
+        } else {
+            res.redirect('/newReview')
+        }
     }
     else {
         res.redirect("/newReview")
@@ -52,6 +56,10 @@ router.get("/myReviews/:id", async (req, res) => {
 
 router.get("/login", async (req, res) => {
     res.render("login")
+})
+
+router.get("/newReview", async (req, res) => {
+    res.render("newReview")
 })
 
 router.get("/signup", async (req, res) => {
