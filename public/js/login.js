@@ -1,10 +1,10 @@
 console.log("login page connected")
 
-$("#login").on("click", function() {
+$("#login-btn").on("click", function() {
     var login = {
-        userName: $("#name").val(), // change based on handlebars
-        email: $("#email").val(), // change based on handlebars
-        password: $("#password").val() // change based on handlebars
+        userName: $("#login-username").val(), 
+        email: $("#login-email").val(), 
+        password: $("#login-password").val() 
     }
     console.log("Login data", login)
 
@@ -18,15 +18,16 @@ $("#login").on("click", function() {
     }).then(function(response) {
         return response.json()
     }).then(function(data) {
+        console.log("outgoing data from backend", data)
     })
 })
 
-$("#signup").on("click", function() { // change based on handlebars
+$("#signup-btn").on("click", function() { 
     console.log("signup click")
     var signup = {
-        name: $("#name-signup").val(),
-        email: $("#email-signup").val(),
-        password: $("#password-signup").val()
+        userName: $("#signup-username").val(),
+        email: $("#signup-email").val(),
+        password: $("#signup-password").val()
     }
     console.log("signup data", signup)
 
@@ -40,5 +41,6 @@ $("#signup").on("click", function() { // change based on handlebars
     }).then(function(response) {
         return response.json()
     }).then(function(data) {
+        console.log("backend signup data post fetch", data)
     })
 })

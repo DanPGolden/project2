@@ -33,7 +33,7 @@ Review.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-      user_id: {
+      game_id: {
           type: DataTypes.INTEGER,
           allowNull: false,
           references: {

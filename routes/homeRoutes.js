@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const { Review, Game } = require("../models/index")
+const {Review, Game} = require("../models/index")
 
 router.get("/", async (req, res) => {
     res.render("home")
@@ -35,6 +35,10 @@ router.get("/gameReviews/:id", async (req, res) => {
 
 router.get("/login", async (req, res) => {
     res.render("login")
+})
+
+router.get("/signup", async (req, res) => {
+    res.render("signup")
 })
 
 module.exports = router;

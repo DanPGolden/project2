@@ -3,7 +3,7 @@ const {User} = require("../models/index.js")
 
 router.post('/signup', async (req, res) => {
     const newUserData = await User.create({
-        name: req.body.name,
+        userName: req.body.userName,
         email: req.body.email,
         password: req.body.password,
     }, {raw: true})
@@ -17,6 +17,8 @@ router.post('/signup', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     const userData = await User.findOne({where: {email: req.body.email}})
+    console.log("req body password", req.body.password)
+    console.log("user data", userData)
     if(!userData){
         res.json({error: "user not found"})
     }
