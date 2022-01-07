@@ -1,10 +1,7 @@
 const sequelize = require('../config/connection');
-const {Console, Game, Review, User} = require("../models");
-const bcrypt = reqire('bcrypt');
+const {Game, Review, User} = require("../models");
 
-const reviewSeedData = require("./reviewSeed.json")
 const gameSeedData = require("./gameSeeds.json")
-const consoleData = require("./console.json")
 const userData = require("./usersDummyData.json")
 
 const seedDatabase = async () => {
@@ -14,10 +11,6 @@ const seedDatabase = async () => {
     returning: true,
   });
   await Review.bulkCreate(reviewSeedData, {
-    individualHooks: true,
-    returning: true,
-  });
-  await Console.bulkCreate(consoleData, {
     individualHooks: true,
     returning: true,
   });

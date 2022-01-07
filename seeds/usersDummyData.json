@@ -2,32 +2,16 @@
     {
         "userName" : "User1",
         "email" : "firstuser@user.com",
-        "password" : "userspassword1-6"
+        "password": "12345678"
     }, 
     {
-        "userName" : "User2", 
-        "email"  : "seconduser@user.com",
-        "password" : "userspassword1-6"
-    },
+        "userName" : "User2",
+        "email" : "seconduser@user.com",
+        "password": "123456789"
+    }, 
     {
-        "userName" : "User3", 
-        "email"  : "thirduser@user.com",
-        "password" : "userspassword1-6"
-    },
-    {
-        "userName" : "User4", 
-        "email"  : "fourthuser@user.com",
-        "password" : "userspassword1-6"
-    },
-    {
-        "userName" : "User5", 
-        "email"  : "fifthuser@user.com",
-        "password" : "userspassword1-6"
-    },
-    {
-        "userName" : "User6", 
-        "email"  : "sixthuser@user.com",
-        "password" : "userspassword1-6"
-    }
+        "userName" : "User3",
+        "email" : "thirduser@user.com",
+        "password": "1234567890"
+    } 
 ]
-
