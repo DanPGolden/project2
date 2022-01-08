@@ -59,7 +59,14 @@ router.get("/login", async (req, res) => {
 })
 
 router.get("/newReview", async (req, res) => {
-    res.render("newReview")
+    if (req.session.user_id) {
+        const databaseGames = await Game.findAll({ raw: true })
+        res.render("newReview", { allGames: databaseGames })
+    }
+    else {
+        res.redirect("/login")
+        console.log("You must be logged in to view this page")
+    }
 })
 
 router.get("/signup", async (req, res) => {
@@ -67,5 +74,3 @@ router.get("/signup", async (req, res) => {
 })
 
 module.exports = router;
-
-// pull from the main, merge into my branch, seed database, and check if the specific routes work

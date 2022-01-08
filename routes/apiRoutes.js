@@ -1,8 +1,15 @@
 const router = require("express").Router()
-const {Review} = require("../models/index")
+const {Review, User} = require("../models/index")
 
 router.post("/save", async (req,res) => {
-    let saveReview = await Review.create(req.body)
+    console.log("req.body from save fetch", req.body)
+    let saveReview = await Review.create({
+      game_name: req.body.game_name,
+      title: req.body.title,
+      description: req.body.description,
+      author: req.session.user_id, // insetad of user_id, how do i get the user that's logged in userName property?
+      user_id: req.session.user_id
+    })
     res.json(saveReview)
 })
 

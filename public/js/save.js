@@ -1,11 +1,11 @@
 console.log("Save page connected")
 
-$('#save').on('click', function(e) { // change based on handlebars buttons
+$('#save-review-btn').on('click', function(e) { 
     e.preventDefault();
     var newReview = {
-        title: $('#title').val(),
-        description: $('#description').val(), // need to change the #values based on handlebars
-                                              // and decide on review parameters to see what should go here
+        game_name: $('#new-review-game').val(),
+        title: $("new-review-title").val(),
+        description: $('#new-review-description').val()               
     }
     fetch('/api/save', {
         method: 'POST',
@@ -17,6 +17,7 @@ $('#save').on('click', function(e) { // change based on handlebars buttons
     }).then(function(response) {
         return response.json()
     }).then(function(data) {
+        console.log("new post data", data)
         window.location.reload()
     })
 })
