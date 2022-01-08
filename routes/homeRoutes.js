@@ -33,6 +33,10 @@ router.get("/gameReviews/:id", async (req, res) => {
     }
 })
 
+router.get("/gameReviews", async (req, res) => {
+    res.render("gameReviews")
+})
+
 router.get("/myReviews", async (req, res) => {
     console.log('MY REVIEW ROUTE!!!', req.session, req.params)
     if (req.session.user_id) {
