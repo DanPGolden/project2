@@ -1,2 +1,17 @@
-<p>a page for making new reviews will go here</p>
-<input id="title">write your input here</input>
+<p>Fill out the form below to create a new review</p>
+
+<span>Select a Game:</span>
+<select id="game-selection">
+{{#each allGames}}
+	<option value="{{id}}">{{game_name}}</option>
+{{/each}}
+</select>
+<form>
+    <p>Review Title</p>
+    <input id='new-review-title'></input>
+    <p>Review the game!</p>
+    <input id='new-review-description'></input>
+    <button id='save-review-btn'>Save</button>
+</form>
+
+{{!-- To select the data from dropdown: $('#game-selection option:selected').text(); --}}

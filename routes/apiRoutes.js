@@ -1,8 +1,18 @@
 const router = require("express").Router()
-const {Review} = require("../models/index")
+const {Review, User} = require("../models/index")
 
 router.post("/save", async (req,res) => {
-    let saveReview = await Review.create(req.body)
+    console.log("req.body from save fetch", req.body)
+    console.log('session!!!', req.session)
+    let saveReview = await Review.create({
+      game_name: req.body.game_name,
+      game_id: parseInt(req.body.game_id),
+      title: req.body.title,
+      description: req.body.description,
+      author: req.session.userName, 
+      user_id: req.session.user_id
+    })
+    console.log("saved review", saveReview)
     res.json(saveReview)
 })
 

@@ -14,16 +14,10 @@ Review.init(
       game_name: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-            isAlphanumeric: true
-        }
       },
       title: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-            isAlphanumeric: true
-        }
       },
       author: {
         type: DataTypes.STRING, // author = login_id made from signup, connect these for when they want to delete a review
