@@ -6,15 +6,16 @@ router.get("/", async (req, res) => {
 })
 
 router.get("/gamesMain", async (req, res) => {
-    console.log('IN GAMES MAIN! ROUTE!!', req.session)
-    if (req.session.user_id) {
-        const databaseGames = await Game.findAll({ raw: true })
-        res.render("gamesMain", { allGames: databaseGames })
-    }
-    else {
-        res.redirect("/login")
-        console.log("You must be logged in to view this page")
-    }
+    res.render("gamesMain")
+    // console.log('IN GAMES MAIN! ROUTE!!', req.session)
+    // if (req.session.user_id) {
+    //     const databaseGames = await Game.findAll({ raw: true })
+    //     res.render("gamesMain", { allGames: databaseGames })
+    // }
+    // else {
+    //     res.redirect("/login")
+    //     console.log("You must be logged in to view this page")
+    // }
 })
 
 router.get("/gameReviews/:id", async (req, res) => {
