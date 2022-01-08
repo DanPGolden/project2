@@ -9,6 +9,10 @@ router.get("/gamesMain", async (req, res) => {
     res.render("gamesMain")
 })
 
+router.get("/gameReviews", async (req, res) => {
+    res.render("gameReviews")
+})
+
 router.get("/myReviews", async (req, res) => {
     res.render("myReviews")
 })
