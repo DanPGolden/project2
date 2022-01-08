@@ -14,9 +14,6 @@ Game.init(
       game_name: { 
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-            isAlphanumeric: true
-        }
       },
       studio: {
         type: DataTypes.STRING,

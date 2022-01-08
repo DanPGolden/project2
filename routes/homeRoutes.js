@@ -6,7 +6,31 @@ router.get("/", async (req, res) => {
 })
 
 router.get("/gamesMain", async (req, res) => {
-    res.render("gamesMain")
+    console.log('IN GAMES MAIN! ROUTE!!', req.session)
+    if (req.session.user_id) {
+        const databaseGames = await Game.findAll({ raw: true })
+        res.render("gamesMain", { allGames: databaseGames })
+    }
+    else {
+        res.redirect("/login")
+        console.log("You must be logged in to view this page")
+    }
+})
+
+router.get("/gameReviews/:id", async (req, res) => {
+    if (req.session.user_id) {
+        const databaseReviews = await Review.findAll({
+            where: {
+                 game_id: req.params.id 
+        },
+        raw: true,
+    })
+        res.render("gameReviews", {gameReviews: databaseReviews})
+    }
+    else {
+        res.redirect("/login")
+        console.log("You must be logged in to view this page")
+    }
 })
 
 router.get("/gameReviews", async (req, res) => {
@@ -14,13 +38,30 @@ router.get("/gameReviews", async (req, res) => {
 })
 
 router.get("/myReviews", async (req, res) => {
-    res.render("myReviews")
+    console.log('MY REVIEW ROUTE!!!', req.session, req.params)
+    if (req.session.user_id) {
+        const databaseReviews = await Review.findAll({
+            where: {
+                user_id: req.session.user_id
+            },
+            raw: true,
+        })
+        if(databaseReviews.length > 0) {
+            res.render("myReviews", {myReviews: databaseReviews})
+        } else {
+            res.redirect('/newReview')
+        }
+    }
+    else {
+        res.redirect("/newReview")
+        console.log("Make a new review!")
+    }
 })
 
-router.get("/newReview", async (req, res) => {
-    res.render("newReview")
-})
 
+router.get("/gameReviews", async (req, res) => {
+    res.render("gameReviews")
+})
 
 
 // router.get("/gamesMain", async (req, res) => {
@@ -72,12 +113,20 @@ router.get("/newReview", async (req, res) => {
 //     }
 // })
 
+
 router.get("/login", async (req, res) => {
     res.render("login")
 })
 
 router.get("/newReview", async (req, res) => {
-    res.render("newReview")
+    if (req.session.user_id) {
+        const databaseGames = await Game.findAll({ raw: true })
+        res.render("newReview", {allGames: databaseGames})
+    }
+    else {
+        res.redirect("/login")
+        console.log("You must be logged in to view this page")
+    }
 })
 
 router.get("/signup", async (req, res) => {
@@ -85,5 +134,3 @@ router.get("/signup", async (req, res) => {
 })
 
 module.exports = router;
-
-// pull from the main, merge into my branch, seed database, and check if the specific routes work

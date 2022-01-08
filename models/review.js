@@ -14,16 +14,10 @@ Review.init(
       game_name: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-            isAlphanumeric: true
-        }
       },
       title: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-            isAlphanumeric: true
-        }
       },
       author: {
         type: DataTypes.STRING, // author = login_id made from signup, connect these for when they want to delete a review
@@ -47,8 +41,13 @@ Review.init(
         references: {
           model: 'user',
           key: 'id',
+<<<<<<< HEAD
+        },
+      },
+=======
         }
       }
+>>>>>>> c2170374e98b743699a9c5033721a638afa261f3
     },
     {
       sequelize,
