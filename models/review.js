@@ -47,8 +47,13 @@ Review.init(
         references: {
           model: 'user',
           key: 'id',
+<<<<<<< HEAD
+        },
+      },
+=======
         }
       }
+>>>>>>> c2170374e98b743699a9c5033721a638afa261f3
     },
     {
       sequelize,

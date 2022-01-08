@@ -19,6 +19,7 @@ $("#login-btn").on("click", function() {
         return response.json()
     }).then(function(data) {
         console.log("outgoing data from backend", data)
+        window.location.href = '/'
     })
 })
 
