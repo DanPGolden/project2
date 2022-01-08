@@ -7,19 +7,11 @@ const reviewSeedData = require("./reviewSeed.json")
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-<<<<<<< HEAD
-  await Game.bulkCreate(gameSeedData, {
-    individualHooks: true,
-    returning: true,
-  });
-  await Review.bulkCreate(reviewSeedData, {
-=======
   await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
   await Game.bulkCreate(gameSeedData, {
->>>>>>> c2170374e98b743699a9c5033721a638afa261f3
     individualHooks: true,
     returning: true,
   });

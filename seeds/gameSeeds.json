@@ -27,7 +27,8 @@
         "game_name": "Final Fantasy VII Remake",
         "studio": "Square Enix",
         "description": "Final Fantasy VII Remake is a 2020 action role-playing game developed and published by Square Enix. It is the first in a planned series of games remaking the 1997 PlayStation game Final Fantasy VII.",
-        "platform": "PlayStation"
+        "platform": "PlayStation",
+        "game_image": "https://i.imgur.com/3gqiX2e.png"
     },
     {
         "game_name": "Pokémon Legends: Arceus",
