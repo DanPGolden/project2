@@ -26,7 +26,7 @@ Review.init(
         }
       },
       author: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING, // author = login_id made from signup, connect these for when they want to delete a review
         allowNull: false,
       },
       description: {
@@ -47,8 +47,13 @@ Review.init(
         references: {
           model: 'user',
           key: 'id',
+<<<<<<< HEAD
         },
       },
+=======
+        }
+      }
+>>>>>>> c2170374e98b743699a9c5033721a638afa261f3
     },
     {
       sequelize,

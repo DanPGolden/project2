@@ -4,13 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digital Anvil</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 </head>
+<nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+
+      <a id="logo-container" href="/" class="brand-logo"><img class="responsive-img" src = "digital anvil-logos_black3.png"></a>
+
+      
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/gamesMain">Games</a></li>
+        <li><a href="/newReview">New Reviews</a></li>
+        <li><a href="/myReviews">User Reviews</a></li>
+        
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="/gamesMain">Games</a></li>
+        <li><a href="/newReview">New Reviews</a></li>
+        <li><a href="/myReviews">User Reviews</a></li>
+        
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
 <body>
     {{{body}}}
+    <script src='/js/save.js'></script>
+    <script src='/js/delete.js'></script>
+    <script src='/js/login.js'></script>
+    <script src='/js/logout.js'></script>
+    <script src='/js/nav.js'></script>
 </body>
+ <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
 </html>

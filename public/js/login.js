@@ -1,24 +1,46 @@
-const loginFormHandler = async (event) => {
-    event.preventDefault();
+console.log("login page connected")
 
-    const email = document.querySelector('#email-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
-
-    if (email && password) {
-        const response = await fetch('/api/users/login', {
-            method: 'POST',
-            body: JSON.stringify({ email, password }),
-            headers: { 'Content-Type': 'application/json' },
-        });
-
-        if (response.ok) {
-            document.location.replace('/');
-        } else {
-            alert('Failed to log in');
-        }
+$("#login-btn").on("click", function() {
+    var login = {
+        userName: $("#login-username").val(), 
+        email: $("#login-email").val(), 
+        password: $("#login-password").val() 
     }
-};
+    console.log("Login data", login)
 
-document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+    fetch('/users/login', {
+        method: 'POST',
+        headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(login)
+    }).then(function(response) {
+        return response.json()
+    }).then(function(data) {
+        console.log("outgoing data from backend", data)
+    })
+})
+
+$("#signup-btn").on("click", function() { 
+    console.log("signup click")
+    var signup = {
+        userName: $("#signup-username").val(),
+        email: $("#signup-email").val(),
+        password: $("#signup-password").val()
+    }
+    console.log("signup data", signup)
+
+    fetch('/users/signup', {
+        method: 'POST',
+        headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(signup)
+    }).then(function(response) {
+        return response.json()
+    }).then(function(data) {
+        console.log("backend signup data post fetch", data)
+    })
+})
