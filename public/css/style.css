@@ -63,6 +63,6 @@ body {
   background: #fff;
 }
 
-#card-image-small {
-
+.card {
+  min-height: 600px;
 }
