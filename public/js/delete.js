@@ -16,5 +16,3 @@ function deleteScript() {
         })
     })
 };
-
-module.exports = deleteScript;
