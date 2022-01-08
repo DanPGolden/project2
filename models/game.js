@@ -29,7 +29,7 @@ Game.init(
       },
       game_image: {
         type: DataTypes.STRING,
-        // allowNull: false
+        allowNull: false
       }
     },
     {

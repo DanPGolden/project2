@@ -6,15 +6,15 @@
     <div class="col s10 offset-s1 grey">
       <div class="row">
 
-  {{#each allGames}}
+        {{#each allGames}}
 
 
         <div class="col s12 m4">
-         
+
           <div class="card center">
 
             <div class="card-image">
-              <img src="\assets\FFVIIRemake1.png" alt="" class="responsive-img">
+              <img src={{game_image}} alt="" class="responsive-img">
             </div>
             <div class="card-content">
               <h1 class="flow-text">{{game_name}}</h1>
@@ -26,124 +26,8 @@
           </div>
         </div>
 
-  {{/each}}
-
-        {{!-- <div class="col s12 m4">
-          <div class="card center">
-            <div class="card-image">
-              <img src="\assets\Mario_Party_Superstars1.jpg" alt="" class="responsive-img">
-            </div>
-            <div class="card-content">
-              <h1 class="flow-text">{{game_name}}</h1>
-            </div>
-            <p>{{studio}}</p>
-            <p>{{description}}</p>
-            <p>{{platform}}</p>
-            <button name={{id}} class="review-btn">See the reviews for this game!</button>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card center">
-            <div class="card-image">
-              <img src="\assets\Pokemon_Legends_Arceus_1.jpg" alt="" class="responsive-img">
-            </div>
-            <div class="card-content">
-              <h1 class="flow-text">{{game_name}}</h1>
-            </div>
-            <p>{{studio}}</p>
-            <p>{{description}}</p>
-            <p>{{platform}}</p>
-            <button name={{id}} class="review-btn">See the reviews for this game!</button>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card center">
-
-            <div class="card-image">
-              <img src="\assets\Forza_Horizon_5_1.jpg" alt="" class="responsive-img">
-            </div>
-            <div class="card-content">
-              <h1 class="flow-text">{{game_name}}</h1>
-            </div>
-            <p>{{studio}}</p>
-            <p>{{description}}</p>
-            <p>{{platform}}</p>
-            <button name={{id}} class="review-btn">See the reviews for this game!</button>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card center">
-            <div class="card-image">
-              <img src="\assets\Halo_Infinite1.png" alt="" class="responsive-img">
-            </div>
-            <div class="card-content">
-              <h1 class="flow-text">{{game_name}}</h1>
-            </div>
-            <p>{{studio}}</p>
-            <p>{{description}}</p>
-            <p>{{platform}}</p>
-            <button name={{id}} class="review-btn">See the reviews for this game!</button>
-          </div>
-        </div>
-        <div class="col s12 m4  ">
-          <div class="card center">
-
-            <div class="card-image">
-              <img src="\assets\Ratchet_&_Clank_-_Rift_Apart1.png" alt="" class="responsive-img">
-            </div>
-            <div class="card-content">
-              <h1 class="flow-text">{{game_name}}</h1>
-            </div>
-            <p>{{studio}}</p>
-            <p>{{description}}</p>
-            <p>{{platform}}</p>
-            <button name={{id}} class="review-btn">See the reviews for this game!</button>
-          </div>
-        </div>
-        <div class="col s12 m4  ">
-          <div class="card center">
-
-            <div class="card-image">
-              <img src="\assets\Rocket_League_1.jpg" alt="" class="responsive-img">
-            </div>
-            <div class="card-content">
-              <h1 class="flow-text">{{game_name}}</h1>
-            </div>
-            <p>{{studio}}</p>
-            <p>{{description}}</p>
-            <p>{{platform}}</p>
-            <button name={{id}} class="review-btn">See the reviews for this game!</button>
-          </div>
-        </div>
-        <div class="col s12 m4  ">
-          <div class="card center">
-
-            <div class="card-image">
-              <img src="\assets\Rocket_League_1.jpg" alt="" class="responsive-img">
-            </div>
-            <div class="card-content">
-              <h1 class="flow-text">{{game_name}}</h1>
-            </div>
-            <p>{{studio}}</p>
-            <p>{{description}}</p>
-            <p>{{platform}}</p>
-            <button name={{id}} class="review-btn">See the reviews for this game!</button>
-          </div>
-        </div> --}}
+        {{/each}}
       </div>
     </div>
 
   </div>
-
-
-
-  {{!--
-  {{#each allGames}}
-
-  <h1>{{game_name}}</h1>
-  <p>{{studio}}</p>
-  <p>{{description}}</p>
-  <p>{{platform}}</p>
-  <button name={{id}} class="review-btn">See the reviews for this game!</button>
-
-  {{/each}} --}}
