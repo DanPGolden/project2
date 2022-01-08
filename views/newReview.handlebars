@@ -1,20 +1,11 @@
 <p>Fill out the form below to create a new review</p>
 
-    <p>Choose a game to review</p>
-    <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
-    <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
-    </ul>
-{{!-- how do you populate each list item from handlebars --}}
-{{!-- 
+<span>Select a Game:</span>
+<select id="game-selection">
 {{#each allGames}}
-<h1>{{game_name}}</h1>
-{{/each}} --}}
-{{!-- want each of these to go into each list item --}}
-
+	<option value="{{id}}">{{game_name}}</option>
+{{/each}}
+</select>
 <form>
     <p>Review Title</p>
     <input id='new-review-title'></input>
@@ -23,4 +14,4 @@
     <button id='save-review-btn'>Save</button>
 </form>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+{{!-- To select the data from dropdown: $('#game-selection option:selected').text(); --}}
