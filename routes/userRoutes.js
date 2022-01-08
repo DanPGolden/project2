@@ -21,21 +21,26 @@ router.post('/login', async (req, res) => {
     console.log("user data", userData)
     if(!userData){
         res.json({error: "user not found"})
-    }
+    } else {
+        const validPassword = await userData.checkPassword(req.body.password)
+         
+        if(validPassword === false){
+            res.json({error: "incorrect password"})
+        }else if(userData.userName != req.body.userName) {
+            res.json({error: "incorrect USERNAME!"})
+        } else {
+            req.session.save(() => {
+                console.log('user data in session save!', userData)
+                req.session.user_id = userData.id;
+                req.session.userName = userData.userName;
+                req.session.logged_in = true;
+                res.json({message: 'U r logged in now!'})
+            })
+            console.log("logged in user OUTSIDE", req.session)
+        }
 
-    const validPassword = await userData.checkPassword(req.body.password)
-    if(validPassword === false){
-        res.json({error: "incorrect password"})
     }
-
-    req.session.save(() => {
-        console.log('user data in session save!', userData)
-        req.session.user_id = userData.id;
-        req.session.userName = userData.userName;
-        req.session.logged_in = true;
-        res.json({message: 'U r logged in now!'})
-    })
-    console.log("logged in user OUTSIDE", req.session)
+   
 })
 
 router.get("/logout", async (req, res) => {

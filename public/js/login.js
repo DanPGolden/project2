@@ -19,7 +19,11 @@ $("#login-btn").on("click", function() {
         return response.json()
     }).then(function(data) {
         console.log("outgoing data from backend", data)
-        window.location.href = '/'
+        if(data.error) {
+            alert('Your password or email is incorrect. Please double check your entries')
+        } else {
+            window.location.href = '/'
+        }
     })
 })
 
@@ -43,5 +47,6 @@ $("#signup-btn").on("click", function() {
         return response.json()
     }).then(function(data) {
         console.log("backend signup data post fetch", data)
+        window.location.href = '/'
     })
 })
