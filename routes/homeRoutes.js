@@ -17,6 +17,9 @@ router.get("/newReview", async (req, res) => {
     res.render("newReview")
 })
 
+router.get("/gameReviews", async (req, res) => {
+    res.render("gameReviews")
+})
 
 
 // router.get("/gamesMain", async (req, res) => {
