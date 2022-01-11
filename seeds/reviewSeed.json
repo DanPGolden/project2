@@ -1,37 +1,64 @@
 [
     {
-        "game_name": "test game 1",
+        "game_name": "Halo Infinite",
         "title": "This game sucks",
         "author": "test review person 1",
         "description": "This test game is bad!!",
         "game_id": 1,
-        "user_id": 2
+        "user_id": 1
     },
     {
-        "game_name": "test game 2",
+        "game_name": "Rocket League",
         "title": "This game is ok",
         "author": "test review person 2",
         "description": "This test game is fine",
-        "game_id": 1,
+        "game_id": 2,
         "user_id": 2
 
     },
     {
-        "game_name": "test game 3",
+        "game_name": "Forza Horizon 5",
         "title": "This game is great",
         "author": "test review person 3",
         "description": "This test game is amazing!!!",
-        "game_id": 1,
+        "game_id": 3,
+        "user_id": 2
+
+    },
+    {
+        "game_name": "Ratchet & Clank: Rift Apart",
+        "title": "This game is great",
+        "author": "test review person 3",
+        "description": "This test game is amazing!!!",
+        "game_id": 4,
         "user_id": 3
 
     },
     {
-        "game_name": "test game 3",
+        "game_name": "Pokemon Legends: Arceus",
         "title": "This game is great",
         "author": "test review person 3",
         "description": "This test game is amazing!!!",
-        "game_id": 1,
-        "user_id": 1
+        "game_id": 5,
+        "user_id": 3
+
+    },
+    {
+        "game_name": "Final Fantasy VII Remake",
+        "title": "This game is great",
+        "author": "test review person 3",
+        "description": "This test game is amazing!!!",
+        "game_id": 6,
+        "user_id": 4
+
+    },
+    {
+        "game_name": "Mario Party Superstars",
+        "title": "This game is great",
+        "author": "test review person 3",
+        "description": "This test game is amazing!!!",
+        "game_id": 7,
+        "user_id": 5
 
     }
 ]

@@ -1,8 +1,4 @@
-<p>A page showing the logged in user's reviews</p>
-
-{{!-- {{#if user_id == req.session.id}} --}}
-
-{{#each myReviews}}
+{{!-- {{#each myReviews}}
 
 <h3>{{title}}</h3>
 <p>{{description}}</p>
@@ -10,8 +6,20 @@
 <p>{{user_id}}</p>
 <p>{{game_id}}</p>
 
+{{/each}} --}}
+
+{{#each myReviews}}
+        <div class="col s12 m4">
+          <div class="card center">
+            <div class="card-image">
+            </div>
+            <div class="card-content">
+              <h1 class="flow-text">{{title}}</h1>
+            </div>
+            <p>{{description}}</p>
+            <p>{{user_id}}</p>
+            <p>{{game_id}}</p>
+            <button name={{id}} class="delete-btn">Delete Review</button>
+          </div>
+        </div>
 {{/each}}
-
-{{!-- {{#else "No reviews exist!"}}
-
-{{/if}} --}}

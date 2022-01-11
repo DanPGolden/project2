@@ -43,5 +43,6 @@ $("#signup-btn").on("click", function() {
         return response.json()
     }).then(function(data) {
         console.log("backend signup data post fetch", data)
+        window.location.href = '/'
     })
 })
