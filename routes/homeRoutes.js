@@ -5,33 +5,33 @@ router.get("/", async (req, res) => {
     res.render("home")
 })
 
-router.get("/gamesMain", async (req, res) => {
-    console.log('IN GAMES MAIN! ROUTE!!', req.session)
-    if (req.session.user_id) {
-        const databaseGames = await Game.findAll({ raw: true })
-        res.render("gamesMain", { allGames: databaseGames })
-    }
-    else {
-        res.redirect("/login")
-        console.log("You must be logged in to view this page")
-    }
-})
+// router.get("/gamesMain", async (req, res) => {
+//     console.log('IN GAMES MAIN! ROUTE!!', req.session)
+//     if (req.session.user_id) {
+//         const databaseGames = await Game.findAll({ raw: true })
+//         res.render("gamesMain", { allGames: databaseGames })
+//     }
+//     else {
+//         res.redirect("/login")
+//         console.log("You must be logged in to view this page")
+//     }
+// })
 
-router.get("/gameReviews/:id", async (req, res) => {
-    if (req.session.user_id) {
-        const databaseReviews = await Review.findAll({
-            where: {
-                 game_id: req.params.id 
-        },
-        raw: true,
-    })
-        res.render("gameReviews", {gameReviews: databaseReviews})
-    }
-    else {
-        res.redirect("/login")
-        console.log("You must be logged in to view this page")
-    }
-})
+// router.get("/gameReviews/:id", async (req, res) => {
+//     if (req.session.user_id) {
+//         const databaseReviews = await Review.findAll({
+//             where: {
+//                  game_id: req.params.id 
+//         },
+//         raw: true,
+//     })
+//         res.render("gameReviews", {gameReviews: databaseReviews})
+//     }
+//     else {
+//         res.redirect("/login")
+//         console.log("You must be logged in to view this page")
+//     }
+// })
 
 router.get("/gameReviews", async (req, res) => {
     res.render("gameReviews")
@@ -64,33 +64,33 @@ router.get("/gameReviews", async (req, res) => {
 })
 
 
-// router.get("/gamesMain", async (req, res) => {
-//     console.log('IN GAMES MAIN! ROUTE!!', req.session)
-//     if (req.session.user_id) {
-//         const databaseGames = await Game.findAll({ raw: true })
-//         res.render("gamesMain", { allGames: databaseGames })
-//     }
-//     else {
-//         res.redirect("/login")
-//         console.log("You must be logged in to view this page")
-//     }
-// })
+router.get("/gamesMain", async (req, res) => {
+    console.log('IN GAMES MAIN! ROUTE!!', req.session)
+    if (req.session.user_id) {
+        const databaseGames = await Game.findAll({ raw: true })
+        res.render("gamesMain", { allGames: databaseGames })
+    }
+    else {
+        res.redirect("/login")
+        console.log("You must be logged in to view this page")
+    }
+})
 
-// router.get("/gameReviews/:id", async (req, res) => {
-//     if (req.session.user_id) {
-//         const databaseReviews = await Review.findAll({
-//             where: {
-//                  game_id: req.params.id 
-//         },
-//         raw: true,
-//     })
-//         res.render("gameReviews", {gameReviews: databaseReviews})
-//     }
-//     else {
-//         res.redirect("/login")
-//         console.log("You must be logged in to view this page")
-//     }
-// })
+router.get("/gameReviews/:id", async (req, res) => {
+    if (req.session.user_id) {
+        const databaseReviews = await Review.findAll({
+            where: {
+                 game_id: req.params.id 
+        },
+        raw: true,
+    })
+        res.render("gameReviews", {gameReviews: databaseReviews})
+    }
+    else {
+        res.redirect("/login")
+        console.log("You must be logged in to view this page")
+    }
+})
 
 router.get("/myReviews", async (req, res) => {
     console.log('MY REVIEW ROUTE!!!', req.session, req.params)
